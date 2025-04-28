@@ -106,11 +106,11 @@ Estas son algunas de sus pantallas principales
 
 Incorporamos una API con varios modulos de tolerancia a fallas, volviendola una app robusta y dificil de romper anet fallos o accidentes de usuario. Ademas tiene integrado y configurado 
 un [Circuit Breaker](https://docs.spring.io/spring-cloud-circuitbreaker/docs/current/reference/html/spring-cloud-circuitbreaker-resilience4j.html). Este bean pasa por tres estados principales:
-- Cerrado: Estado por defecto. Permite que los servicios esten accesibles al usuario, mientras no se cruce un umbral de fallas (se peude definir un porcentaje de request con algun fallo
+- `Cerrado`: Estado por defecto. Permite que los servicios esten accesibles al usuario, mientras no se cruce un umbral de fallas (se peude definir un porcentaje de request con algun fallo
 tratado por cada tantas resuest) permitiendo cambiar de estado.
-- Abierto: Tras cruzar el umbral, se abre el C. B. bloqueando (de manera controlada y avisando al usuario) que uno o varios servicios de la API se encuentran en recuperación, durante un 
+- `Abierto`: Tras cruzar el umbral, se abre el C. B. bloqueando (de manera controlada y avisando al usuario) que uno o varios servicios de la API se encuentran en recuperación, durante un 
 lapso de tiempo finito (por ejemplo: 10 o 20 segundos) 
-- Medio-abierto: Pasado el tiempo de bloqueo, se permite el acceso a los servicios con request de prueba, si un porcentaje de estas request es exitosa el C. B.  vuelve a su estado cerrado.
+- `Medio-abierto`: Pasado el tiempo de bloqueo, se permite el acceso a los servicios con request de prueba, si un porcentaje de estas request es exitosa el C. B.  vuelve a su estado cerrado.
 
 Todo el comportamiento anterior puede ser configurado, desde cantidad de request en cada estado del C. B. lapsos de tiempo y porcentajes, hasta la acción de un Fall Back, que tomara el 
 flujo de trabajo en una dirección que proteja la información recibida o simplemente notifique al usuario.
