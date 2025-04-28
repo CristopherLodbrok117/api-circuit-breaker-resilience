@@ -56,7 +56,7 @@ Estas son algunas de sus pantallas principales
 
 <br>
 
-#### COndición del paciente
+#### Condición del paciente
 <img src="https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/190c53affb4be9c95d58c6e7a9aedfd068dee692/screenshots/06%20condicion.png" alt="condicion" width="350">
 
 <br>
@@ -168,10 +168,15 @@ public class ResilienceConfig {
 <br>
 
 ### Navegación por menú
+https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/main/videos/PantallasApp.mp4
 
+<br>
 
 ### Resiliencia desde App movil
+https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/main/videos/ResilienciaApp.mp4
+
+<br>
 
 ### Resiliencia en API desde Insomnia
-
+https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/main/videos/ResilienciaApp.mp4
 
