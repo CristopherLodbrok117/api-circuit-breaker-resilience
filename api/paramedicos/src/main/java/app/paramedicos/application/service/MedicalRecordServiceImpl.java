@@ -60,11 +60,12 @@ public class MedicalRecordServiceImpl implements MedicalRecordService {
     }
 
     @Override
-    public MedicalRecord update(MedicalRecord medicalRecord, long id) {
+    public MedicalRecord update(MedicalRecord medicalRecord, long patientId) {
         return medicalRecordCircuitBreaker.executeSupplier(() ->{
             validateMedicalRecord(medicalRecord);
 
-            MedicalRecord dbMedicalRecord = findOne(id);
+            MedicalRecord dbMedicalRecord = medicalRecordRepository.findByPatient_Id(patientId)
+                    .orElseThrow(() -> new MedicalRecordException("No se encontro el record del paciente con ID: " + patientId));
 
             medicalRecord.setId(dbMedicalRecord.getId());
 
