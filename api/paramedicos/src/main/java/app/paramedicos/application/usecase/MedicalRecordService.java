@@ -19,4 +19,6 @@ public interface MedicalRecordService {
     public MedicalRecord update(MedicalRecord medicalRecord, long id);
 
     public void delete(long id);
+
+    public void validateMedicalRecord(MedicalRecord record);
 }

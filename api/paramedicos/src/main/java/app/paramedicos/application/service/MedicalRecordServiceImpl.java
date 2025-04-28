@@ -6,10 +6,14 @@ import app.paramedicos.domain.model.MedicalRecord;
 import app.paramedicos.domain.repository.MedicalRecordRepository;
 import app.paramedicos.web.dto.MedicalRecordDto;
 import io.github.resilience4j.circuitbreaker.CircuitBreaker;
+import jakarta.validation.ValidationException;
+import jakarta.validation.Validator;
+import jakarta.validation.ConstraintViolation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Set;
 
 @Service
 @RequiredArgsConstructor
@@ -17,12 +21,14 @@ public class MedicalRecordServiceImpl implements MedicalRecordService {
 
     private final MedicalRecordRepository medicalRecordRepository;
     private final CircuitBreaker medicalRecordCircuitBreaker;
+    private final Validator validator;
 
     @Override
     public MedicalRecord create(MedicalRecord medicalRecord) {
-        return medicalRecordCircuitBreaker.executeSupplier(() ->
-            medicalRecordRepository.save(medicalRecord)
-            );
+        return medicalRecordCircuitBreaker.executeSupplier(() ->{
+            validateMedicalRecord( medicalRecord);
+            return medicalRecordRepository.save(medicalRecord);
+        });
     }
 
     @Override
@@ -56,6 +62,8 @@ public class MedicalRecordServiceImpl implements MedicalRecordService {
     @Override
     public MedicalRecord update(MedicalRecord medicalRecord, long id) {
         return medicalRecordCircuitBreaker.executeSupplier(() ->{
+            validateMedicalRecord(medicalRecord);
+
             MedicalRecord dbMedicalRecord = findOne(id);
 
             medicalRecord.setId(dbMedicalRecord.getId());
@@ -75,6 +83,16 @@ public class MedicalRecordServiceImpl implements MedicalRecordService {
 
             medicalRecordRepository.deleteById(id);
         });
+
+    }
+
+    @Override
+    public void validateMedicalRecord(MedicalRecord record) {
+        Set<ConstraintViolation<MedicalRecord>> violations = validator.validate(record);
+        if (!violations.isEmpty()) {
+            throw new ValidationException("Error de validación: " + violations.iterator().next().getMessage());
+        }
+
 
     }
 }
