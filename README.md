@@ -31,66 +31,72 @@ Pendiente a implementar:
 [Repositorio](https://github.com/CristopherLodbrok117/AppMedicos/tree/api) de la aplicación movíl
 Estas son algunas de sus pantallas principales
 
-
+#### Pantalla principal
 <img src="https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/190c53affb4be9c95d58c6e7a9aedfd068dee692/screenshots/01%20home.png" alt="Description" width="350">
 
 <br>
 
-![record](https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/190c53affb4be9c95d58c6e7a9aedfd068dee692/screenshots/02%20medical%20record.png)
-<img src="https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/190c53affb4be9c95d58c6e7a9aedfd068dee692/screenshots/01%20home.png" alt="Description" width="350">
+#### Evaluación general
+<img src="https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/190c53affb4be9c95d58c6e7a9aedfd068dee692/screenshots/02%20medical%20record.png" alt="medical record" width="350">
 
 <br>
 
-![evaluacion](https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/190c53affb4be9c95d58c6e7a9aedfd068dee692/screenshots/03%20Eva%C3%B1uacion.png)
-<img src="https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/190c53affb4be9c95d58c6e7a9aedfd068dee692/screenshots/01%20home.png" alt="Description" width="350">
+#### Evaluacion del paciente
+<img src="https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/190c53affb4be9c95d58c6e7a9aedfd068dee692/screenshots/03%20Eva%C3%B1uacion.png" alt="Evaluación" width="350">
 
 <br>
 
-![evaluacion inicial](https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/190c53affb4be9c95d58c6e7a9aedfd068dee692/screenshots/04%20evaluacion%20inicial.png)
-<img src="https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/190c53affb4be9c95d58c6e7a9aedfd068dee692/screenshots/01%20home.png" alt="Description" width="350">
+#### Evaluacion inicial
+<img src="https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/190c53affb4be9c95d58c6e7a9aedfd068dee692/screenshots/04%20evaluacion%20inicial.png" alt="evaluacion inicial" width="350">
 
 <br>
 
-![exploracion fisica](https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/190c53affb4be9c95d58c6e7a9aedfd068dee692/screenshots/05%20exploracion%20fisica.png)
-<img src="https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/190c53affb4be9c95d58c6e7a9aedfd068dee692/screenshots/01%20home.png" alt="Description" width="350">
+#### Exploracion fisica
+<img src="https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/190c53affb4be9c95d58c6e7a9aedfd068dee692/screenshots/05%20exploracion%20fisica.png" alt="Exploracion fisica" width="350">
 
 <br>
 
-![condicion](https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/190c53affb4be9c95d58c6e7a9aedfd068dee692/screenshots/06%20condicion.png)
-<img src="https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/190c53affb4be9c95d58c6e7a9aedfd068dee692/screenshots/01%20home.png" alt="Description" width="350">
+#### COndición del paciente
+<img src="https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/190c53affb4be9c95d58c6e7a9aedfd068dee692/screenshots/06%20condicion.png" alt="condicion" width="350">
 
 <br>
 
-![traslado](https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/190c53affb4be9c95d58c6e7a9aedfd068dee692/screenshots/07%20traslado.png)
-<img src="https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/190c53affb4be9c95d58c6e7a9aedfd068dee692/screenshots/01%20home.png" alt="Description" width="350">
+#### Traslado del paciente
+<img src="https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/190c53affb4be9c95d58c6e7a9aedfd068dee692/screenshots/07%20traslado.png" alt="traslado" width="350">
 
 <br>
 
-![insumos](https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/190c53affb4be9c95d58c6e7a9aedfd068dee692/screenshots/08%20insumos.png)
-<img src="https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/190c53affb4be9c95d58c6e7a9aedfd068dee692/screenshots/01%20home.png" alt="Description" width="350">
+#### Control de insumos
+<img src="https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/190c53affb4be9c95d58c6e7a9aedfd068dee692/screenshots/08%20insumos.png" alt="insumos" width="350">
 
 <br>
 
+#### Selector de fecha
 <img src="https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/190c53affb4be9c95d58c6e7a9aedfd068dee692/screenshots/09%20fecha.png" alt="fecha" width="350">
 
 <br>
 
+#### Selector de hora
 <img src="https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/190c53affb4be9c95d58c6e7a9aedfd068dee692/screenshots/10%20hora.png" alt="hora" width="350">
 
 <br>
 
+#### Varios modulos de fecha
 <img src="https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/190c53affb4be9c95d58c6e7a9aedfd068dee692/screenshots/11%20mas%20fechas.png" alt="mas fechas" width="350">
 
 <br>
 
+#### Uso de modales
 <img src="https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/190c53affb4be9c95d58c6e7a9aedfd068dee692/screenshots/12%20modales.png" alt="modales" width="350">
 
 <br>
 
+#### Scroll pickers para uso de gestos
 <img src="https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/190c53affb4be9c95d58c6e7a9aedfd068dee692/screenshots/13%20scroll%20pickers.png" alt="scroll pickers" width="350">
 
 <br>
 
+#### Firmas digitales
 <img src="https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/190c53affb4be9c95d58c6e7a9aedfd068dee692/screenshots/14%20firma%20digital.png" alt="firma digital" width="350">
 
 <br>
