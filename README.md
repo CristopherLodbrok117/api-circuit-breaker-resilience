@@ -173,10 +173,11 @@ public class ResilienceConfig {
 <br>
 
 ### Resiliencia desde App movil
-https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/main/videos/ResilienciaApp.mp4
+[Video de resiliencia en la app movil](https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/f5192d9277e324f67ae5ee1299da5db440b8aede/videos/ResilienciaApp.mp4)
 
 <br>
 
 ### Resiliencia en API desde Insomnia
-https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/main/videos/ResilienciaApp.mp4
+[Video de resiliencia en la API](https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/f5192d9277e324f67ae5ee1299da5db440b8aede/videos/ResilienceAPI.mp4)
+
 
