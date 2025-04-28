@@ -22,7 +22,6 @@ insumos y captura de firmas digitales.
 Pendiente a implementar:
 - Base de datos local
 - Generador de PDF (documentos legales)
-- Actuator (monitoreo de salud de la API)
 
 <br>
 
