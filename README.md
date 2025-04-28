@@ -166,6 +166,8 @@ public class ResilienceConfig {
 ```
 <br>
 
+## Videos de su funcionamiento
+
 ### Navegación por menú
 [Video de pantallas de app](https://github.com/CristopherLodbrok117/api-circuit-breaker-resilience/blob/9f2664f8a53258a640bd8a3bb6981df105247446/videos/PantallasApp.mp4)
 
