@@ -2,6 +2,7 @@ package app.paramedicos.web.exception;
 
 import app.paramedicos.domain.exception.MedicalRecordException;
 import app.paramedicos.domain.exception.PatientNotFoundException;
+import io.github.resilience4j.circuitbreaker.CallNotPermittedException;
 import org.hibernate.query.sqm.PathElementException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,5 +26,12 @@ public class GlobalControllerAdvice {
         return ResponseEntity
                 .status(HttpStatus.BAD_REQUEST)
                 .body(Map.of("error", ex.getMessage()));
+    }
+
+    @ExceptionHandler(CallNotPermittedException.class)
+    ResponseEntity<Map<String, String>> circuitBreakerOpenHandler(CallNotPermittedException ex) {
+        return ResponseEntity
+                .status(HttpStatus.SERVICE_UNAVAILABLE)
+                .body(Map.of("error", "Servicio en recuperación. Intente en unos segundos."));
     }
 }
