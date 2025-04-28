@@ -1,8 +1,11 @@
 package app.paramedicos.application.service;
 
+import app.paramedicos.application.usecase.MedicalRecordService;
 import app.paramedicos.application.usecase.PatientService;
 import app.paramedicos.domain.exception.PatientNotFoundException;
+import app.paramedicos.domain.model.MedicalRecord;
 import app.paramedicos.domain.model.Patient;
+import app.paramedicos.domain.repository.MedicalRecordRepository;
 import app.paramedicos.domain.repository.PatientRepository;
 import app.paramedicos.web.dto.PatientDto;
 import io.github.resilience4j.circuitbreaker.CircuitBreaker;
@@ -11,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -19,6 +23,7 @@ public class PatientServiceImpl implements PatientService {
 
 
     private final PatientRepository patientRepository;
+    private final MedicalRecordRepository medicalRecordRepository;
     private final CircuitBreaker patientServiceCircuitBreaker;
 
     @Override
@@ -37,6 +42,9 @@ public class PatientServiceImpl implements PatientService {
 
             folio = date.toString().replaceAll("-", "") + newPatient.getId();
             newPatient.setFolio(folio);
+
+            // Create his record
+            createInitialRecord(newPatient);
 
             return patientRepository.save(newPatient);
         });
@@ -95,5 +103,33 @@ public class PatientServiceImpl implements PatientService {
             }
             patientRepository.deleteById(id);
         });
+    }
+
+    @Override
+    public void createInitialRecord(Patient patient) {
+        String defaultValue = "-";
+
+        MedicalRecord patientRecord = MedicalRecord.builder()
+                .patient(patient)
+                .date(LocalDateTime.now())
+                .attentionReason(defaultValue)
+                .serviceLocation(defaultValue)
+                .vehicleType(defaultValue)
+                .vehicleNum(defaultValue)
+                .operator(defaultValue)
+                .intern(defaultValue)
+                .moreInterns(defaultValue)
+                .affiliation(defaultValue)
+                .gender(defaultValue)
+                .age(0)
+                .address(defaultValue)
+                .colony(defaultValue)
+                .municipality(defaultValue)
+                .phone(defaultValue)
+                .rightful(defaultValue)
+                .build();
+
+        medicalRecordRepository.save(patientRecord);
+
     }
 }

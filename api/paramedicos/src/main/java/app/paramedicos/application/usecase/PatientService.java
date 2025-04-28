@@ -19,4 +19,6 @@ public interface PatientService {
     public Patient update(Patient patient, long id);
 
     public void delete(long id);
+
+    public void createInitialRecord(Patient patient);
 }
